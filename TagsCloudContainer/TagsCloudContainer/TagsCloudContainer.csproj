@@ -18,7 +18,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\tdd\TagsCloudVisualization\TagsCloudVisualization\TagsCloudVisualization.csproj" />
+      <ProjectReference Include="..\TagsCloudVisualization\TagsCloudVisualization.csproj" />
+      <ProjectReference Include="..\TagsCloudVisualization\TagsCloudVisualization.csproj" />
     </ItemGroup>
 
 </Project>
