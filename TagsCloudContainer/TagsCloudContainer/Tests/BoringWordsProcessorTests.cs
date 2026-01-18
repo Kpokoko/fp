@@ -39,7 +39,7 @@ public class BoringWordsProcessorTests
             .ReadFile(path);
         
         var resultData = _container
-            .Resolve<BoringWordsProcessor>()
+            .Resolve<IBoringWordsProcessor>()
             .WordsToLowerAndRemoveBoringWords(inputData).Keys;
         
         resultData.Should().BeEquivalentTo(expectedData);
@@ -57,7 +57,7 @@ public class BoringWordsProcessorTests
             .ReadFile(path);
         
         var resultData = _container
-            .Resolve<BoringWordsProcessor>()
+            .Resolve<IBoringWordsProcessor>()
             .WordsToLowerAndRemoveBoringWords(inputData).Keys;
         
         resultData.Should().BeEquivalentTo(expectedData);
@@ -75,7 +75,7 @@ public class BoringWordsProcessorTests
             .ReadFile(path);
         
         var resultData = _container
-            .Resolve<BoringWordsProcessor>()
+            .Resolve<IBoringWordsProcessor>()
             .WordsToLowerAndRemoveBoringWords(inputData).Keys;
         
         resultData.Should().BeEquivalentTo(expectedData);

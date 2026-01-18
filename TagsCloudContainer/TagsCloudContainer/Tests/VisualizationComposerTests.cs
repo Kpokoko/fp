@@ -48,7 +48,7 @@ public class VisualizationComposerTests
             .ReadFile(path);
         
         var data = _container
-            .Resolve<BoringWordsProcessor>()
+            .Resolve<IBoringWordsProcessor>()
             .WordsToLowerAndRemoveBoringWords(inputData);
         
         var containers = new TextRectangleContainer[data.Count];

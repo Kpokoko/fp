@@ -34,14 +34,8 @@ public class RectangleSizeCalculator
 
     private Size ClampSize(Size size)
     {
-        if (size.Width < _minSize.Width)
-            size.Width = _minSize.Width;
-        else if (size.Width > _maxSize.Width)
-            size.Width = _maxSize.Width;
-        if (size.Height < _minSize.Height)
-            size.Height = _minSize.Height;
-        else if (size.Height > _maxSize.Height)
-            size.Height = _maxSize.Height;
+        size.Width = Math.Clamp(size.Width, _minSize.Width, _maxSize.Width);
+        size.Height = Math.Clamp(size.Height, _minSize.Height, _maxSize.Height);
         
         return Size.Round(size);
     }

@@ -12,7 +12,7 @@ public static class ContainerComposer
         builder.RegisterInstance(new CircularCloudLayouter(center, imageSize)).As<ILayouter>();
         builder.RegisterInstance(new TxtReader()).As<IFileReader>();
         builder.RegisterInstance(new RectangleSizeCalculator(imageSize));
-        builder.RegisterInstance(new BoringWordsProcessor(banWords));
+        builder.RegisterInstance(new BoringWordsProcessor(banWords)).As<IBoringWordsProcessor>();
         builder.RegisterType<TextRectangleContainerProcessor>();
         builder.RegisterInstance(new WordMeasurer(graphics, font)).As<IWordMeasurer>();
         return builder.Build();

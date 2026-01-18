@@ -2,7 +2,7 @@ using WeCantSpell.Hunspell;
 
 namespace TagsCloudContainer;
 
-public class BoringWordsProcessor
+public class BoringWordsProcessor : IBoringWordsProcessor
 {
     private const float BoringWordQuantityThreshold = 0.35f;
     private readonly List<string> _banWords;
